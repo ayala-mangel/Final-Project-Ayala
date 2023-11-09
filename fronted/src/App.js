@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { createContext, useState } from "react";
+import Navbar from "./commponents/header/Navbar";
+import Router from "./Router";
+import { RoleTypes } from "./users/roletypes";
+
+export const GeneralContext = createContext();
 
 function App() {
+  const [user, setUser] = useState();
+  const [searchWord, setSearchWord] = useState("");
+  const [roleType, setRoleType] = useState(RoleTypes.none);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GeneralContext.Provider
+      value={{ user, searchWord, setSearchWord, roleType, setRoleType }}
+    >
+      <Navbar />
+      <Router />
+    </GeneralContext.Provider>
   );
 }
 

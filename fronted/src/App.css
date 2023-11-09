@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,37 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#search {
+  background-color: #fff;
+  color: #4f4378;
+  border-color: #4f4378;
+  font-family: Rubik;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#letters {
+  /*  color: #776fc4; */
+  font-family: Rubik;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+#letters:hover {
+  color: #fff;
+  background-color: #786fc49d;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+#button {
+  border-radius: 0 !important;
+}
+#button:hover {
+  color: #fff;
+  background-color: #786fc49d;
 }
